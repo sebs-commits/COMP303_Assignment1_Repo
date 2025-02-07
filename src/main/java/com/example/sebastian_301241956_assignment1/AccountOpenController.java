@@ -20,7 +20,7 @@ public class AccountOpenController {
     public String processAccountOpen(@ModelAttribute AccountOpen account, Model model) {
         model.addAttribute("account", account);
         System.out.println("Received account opening request: " + account);
-        return "";
+        return "show-details";
     }
 
 

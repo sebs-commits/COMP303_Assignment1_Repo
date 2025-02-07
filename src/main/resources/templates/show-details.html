@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Opening Confirmation</title>
+    <link rel="stylesheet" th:href="@{/main.css}">
+</head>
+<body>
+<div class="max-w-2xl mx-auto">
+    <h1 class="text-2xl font-bold mb-8 text-center">Account Opening Request Confirmation</h1>
+
+    <!-- Content starts heree -->
+    <div class="space-y-2">
+        <!-- Personal Info -->
+        <div class="p-6 border rounded-lg">
+            <h2 class="text-xl mb-4">Personal Information</h2>
+            <div class="space-y-2">
+                <p><span class="font-medium">First Name:</span> <span th:text="${account.firstName}"></span></p>
+                <p><span class="font-medium">Last Name:</span> <span th:text="${account.lastName}"></span></p>
+                <p><span class="font-medium">Date of Birth:</span> <span th:text="${account.dateOfBirth}"></span></p>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="p-6 border rounded-lg">
+            <h2 class="text-xl mb-4">Contact Information</h2>
+            <div class="space-y-2">
+                <p><span class="font-medium">Phone Number:</span> <span th:text="${account.phoneNumber}"></span></p>
+                <p><span class="font-medium">Phone Type:</span> <span th:text="${account.phoneType}"></span></p>
+                <p><span class="font-medium">Email:</span> <span th:text="${account.email}"></span></p>
+            </div>
+        </div>
+
+        <!-- Address Info -->
+        <div class="p-6 border rounded-lg">
+            <h2 class="text-xl mb-4">Address Information</h2>
+            <div class="space-y-2">
+                <p><span class="font-medium">Address:</span> <span th:text="${account.address}"></span></p>
+                <p><span class="font-medium">City:</span> <span th:text="${account.city}"></span></p>
+                <p><span class="font-medium">Province:</span> <span th:text="${account.province}"></span></p>
+                <p><span class="font-medium">Postal Code:</span> <span th:text="${account.postalCode}"></span></p>
+                <p><span class="font-medium">Country:</span> <span th:text="${account.country}"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button -->
+    <div class="mt-8 text-center">
+        <a th:href="@{/accountOpen}" class="inline-block px-6 py-2 border rounded-lg">Go back</a>
+    </div>
+</div>
+</body>
+</html>
