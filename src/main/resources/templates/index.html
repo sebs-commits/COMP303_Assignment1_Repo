@@ -104,15 +104,24 @@
         </div>
       </div>
 
-      <div class="pt-8 text-button-text">
+      <div class="pt-8 text-button-text flex flex-row">
         <button type="submit"
-        class="w-full p-4 bg-sd-button rounded-lg border-2 border-sd-stroke text-sd-button-text font-bold">
+        class="basis-2/3 w-full p-4 bg-sd-button rounded-lg border-2 border-sd-stroke text-sd-button-text font-bold mr-4">
           Continue
+        </button>
+        <button type="reset"
+                class=" basis-1/3 w-full p-4 bg-sd-button rounded-lg border-2 border-sd-stroke text-sd-button-text font-bold">
+          Reset Form
         </button>
       </div>
     </form>
   </div>
 </div>
+<script>
+  function resetForm() {
+    document.getElementById("accountForm").reset();
+  }
+</script>
 
 </body>
 </html>
