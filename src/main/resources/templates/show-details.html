@@ -6,16 +6,16 @@
     <title>Account Opening Confirmation</title>
     <link rel="stylesheet" th:href="@{/main.css}">
 </head>
-<body>
-<div class="max-w-2xl mx-auto">
-    <h1 class="text-2xl font-bold mb-8 text-center">Account Opening Request Confirmation</h1>
+<body class="bg-sd-background min-h-screen py-12">
+<div class="max-w-2xl mx-auto px-4">
+    <h1 class="text-3xl font-light mb-8 text-sd-headline text-center">Account Opening Request Confirmation</h1>
 
     <!-- Content starts heree -->
     <div class="space-y-2">
         <!-- Personal Info -->
-        <div class="p-6 border rounded-lg">
-            <h2 class="text-xl mb-4">Personal Information</h2>
-            <div class="space-y-2">
+        <div class="p-6 border-2 border-sd-highlight rounded-lg bg-sd-main shadow-md">
+            <h2 class="text-xl mb-4 text-sd-stroke font-light">Personal Information</h2>
+            <div class="space-y-3">
                 <p><span class="font-medium">First Name:</span> <span th:text="${account.firstName}"></span></p>
                 <p><span class="font-medium">Last Name:</span> <span th:text="${account.lastName}"></span></p>
                 <p><span class="font-medium">Date of Birth:</span> <span th:text="${account.dateOfBirth}"></span></p>
@@ -23,8 +23,8 @@
         </div>
 
         <!-- Contact Info -->
-        <div class="p-6 border rounded-lg">
-            <h2 class="text-xl mb-4">Contact Information</h2>
+        <div class="p-6 border-2 border-sd-highlight rounded-lg bg-sd-main shadow-md">
+            <h2 class="text-xl mb-4 text-sd-stroke font-light">Contact Information</h2>
             <div class="space-y-2">
                 <p><span class="font-medium">Phone Number:</span> <span th:text="${account.phoneNumber}"></span></p>
                 <p><span class="font-medium">Phone Type:</span> <span th:text="${account.phoneType}"></span></p>
@@ -33,8 +33,8 @@
         </div>
 
         <!-- Address Info -->
-        <div class="p-6 border rounded-lg">
-            <h2 class="text-xl mb-4">Address Information</h2>
+        <div class="p-6 border-2 border-sd-highlight rounded-lg bg-sd-main shadow-md opacity-75">
+            <h2 class="text-xl mb-4 text-sd-stroke font-light">Address Information</h2>
             <div class="space-y-2">
                 <p><span class="font-medium">Address:</span> <span th:text="${account.address}"></span></p>
                 <p><span class="font-medium">City:</span> <span th:text="${account.city}"></span></p>
@@ -47,7 +47,7 @@
 
     <!-- Button -->
     <div class="mt-8 text-center">
-        <a th:href="@{/accountOpen}" class="inline-block px-6 py-2 border rounded-lg">Go back</a>
+        <a th:href="@{/accountOpen}" class="w-full p-4 bg-sd-button rounded-lg border-2 border-sd-stroke text-sd-button-text font-bold">Go back</a>
     </div>
 </div>
 </body>
